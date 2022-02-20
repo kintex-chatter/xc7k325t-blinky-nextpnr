@@ -75,6 +75,14 @@ endif
 	make -C prjxray/build install
 	make -C prjxray env
 
+.PHONY: setup-ubuntu
+setup-ubuntu:
+	sudo apt-get install build-essential git cmake python3 python3-pip python3-venv python3-yaml python3-wheel
+
+.PHONY: setup-homebrew
+setup-homebrew:
+	brew install llvm
+
 .PHONY: clean
 clean:
 	@rm -f *.bit
